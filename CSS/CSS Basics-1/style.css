@@ -1,0 +1,28 @@
+p{
+    color:red;
+}
+
+.green
+{
+    color:green
+}
+
+#blue
+{
+    color:blue
+}
+
+.green:hover{
+    color:pink;
+}
+
+*{
+    color:purple;
+
+}
+
+.green,.group
+{
+    color:aqua
+}
+

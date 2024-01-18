@@ -1,0 +1,18 @@
+.modify{
+    background-color: aqua;
+    border:1px;
+    height: 100px;
+    width:100px;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    color:#00ffff;
+    color:(255,255,255,255);
+
+}
+.Child{
+    width: 10%;
+    font-size: 2em;
+    font-size: 2rem;
+
+}
