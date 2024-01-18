@@ -1,0 +1,27 @@
+.max-height{
+    border: 1px black solid;
+    max-height: 25px;
+    margin-bottom: 50 px;
+}
+.min-height{
+    border: 1px black solid;
+    min-height: 25px;
+    margin-top: 100px;
+}
+.overflow{
+    border: 1px black solid;
+    max-height: 50px;
+    margin-bottom: 50 px;
+    overflow: scroll;
+
+}
+div{
+    border: 1px black solid;
+    height: 100px;
+    width: 100px;
+    transform: translate(100px,100px);
+    transform: rotate(45deg);
+    transform: scale(1,2);
+    transform: skew(-45deg);
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
