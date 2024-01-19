@@ -1,0 +1,37 @@
+p{
+    position:static;
+}
+
+.box{
+    border:1px black solid;
+    height:100px;
+    width:100px;
+    position: relative;
+    left:15px;
+    top:100px; 
+    display:inline-block; 
+    background-color:aqua  
+}
+#relative{
+    position: relative;
+    left:15px;
+    top:100px;
+
+}
+#fixed{
+    position :fixed;   
+}
+#absolute{
+    position :absolute;   
+}
+#sticky{
+    position :sticky;   
+}
+#Translated
+{
+    transform:perspective(15px) translateZ(-10px);
+}
+#scaled
+{
+    transform:perspective(350px) scaleZ(6) rotateX(45deg) rotateY(30deg)
+}
