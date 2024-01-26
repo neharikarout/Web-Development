@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    height:100 vh;
+    width:100 vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    background-color: red;
+    color: white;
+    padding: 3px 2px;
+
+}
+
+.button::before
+{
+    background-color: black ;
+    
+}
+.button::before:hover
+{
+    background-color: black;
+}
