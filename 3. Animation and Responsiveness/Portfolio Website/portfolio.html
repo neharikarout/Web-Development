@@ -26,16 +26,61 @@
 
 
 
-            <div class="hero">
-                <div class="hero-left">
-                    
+            <div class="hero-section">
+                <div class="faded-text">John Doe</div>
+                <div class="hero-section-left">
+                    <div class="hero-section-heading"> Hi! John Doe</div>
+                    <div class="hero-section-sub-heading"> I am a <span class="role"></span></div>
+                    <div class="hero-section-description">
+                        I am a software developer and here is my port folio website. Here you"ll
+                        learn about my journey a s a software developer.
+                    </div>
+                    <div class="btn-pink" id="btn"> Hire me</div>
 
                 </div>
-                <div class="hero-right">
+
+
+                <div class="hero-section-right">
+                    <div class="absolute icons icons-dots">
+                        <img src="./images/userAssets/dots.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icons-cube">
+                        <img src="./images/userAssets/cube.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icons-circle">
+                        <img src="./images/userAssets/circle.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icons-zigzag">
+                        <img src="./images/userAssets/zigzags.png" alt=""/>
+                    </div>
+                    <div class="absolute icons icons-plus">
+                        <img src="./images/userAssets/plus.png" alt=""/>
+                    </div>
+                    <div class="user-img">
+                        <img src="./images/userAssets/UserImage.png" alt=""/>
+                    </div>
+
 
                 </div>
             </div>
         </div>
-    </div>    
+    </div>  
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="anonymous"></script>
+    <script>
+      var typeData = new Typed(".role", {
+        strings: [
+          "Full Stack Developer",
+          "Web Developer",
+          "UI-UX Designer",
+          "Backend Developer",
+          "Coder",
+        ],
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 80,
+        backDelay: 1000,
+      });
+    </script>  
 </body>
 </html>
