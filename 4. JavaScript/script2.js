@@ -1,14 +1,24 @@
-let boxes = document.querySelectorAll(".box");
-let colors = ["red", "yellow", "blue" , "pink" , "orange","brown" , "aliceblue" , "aqua" , "violet" , "cyan"]
-let size = colors.length
+console.log("Neharika")
 
-boxes.forEach(element => {
-    let random = Math.floor(Math.random()*size)
-    element.style.backgroundColor = colors[random];
-});
+let boxes = document.getElementsByClassName("box")
+console.log(boxes)
 
+boxes[2].style.backgroundColor="red"
 
-boxes.forEach(element => {
-    let random = Math.floor(Math.random()*5)
-    element.style.color=colors[random];
-});
+document.getElementById("red").style.backgroundColor="red"
+
+document.querySelector(".box").style.backgroundColor="green" //selects the first element and returns
+
+console.log(document.querySelectorAll(".box")) // it will return collection items of node list of box class 
+
+//use of for each
+
+document.querySelectorAll(".box").forEach(e=>e.style.backgroundColor="green")
+
+e = document.getElementsByTagName("div")
+
+console.log(e[4].matches("#red"))
+
+console.log(e[3].closest("html"))
+
+console.log(document.querySelector(".container").contains(e[0]))
