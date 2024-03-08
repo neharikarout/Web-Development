@@ -9,7 +9,7 @@ function App() {
 
   //let counter = 15;
 
-  const incValue =() => {
+  let incValue =() => {
     setCounter(counter + 1);
     console.log("value incremented",counter);
     //counter = counter + 1;
