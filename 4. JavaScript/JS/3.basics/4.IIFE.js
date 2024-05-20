@@ -22,4 +22,4 @@
     console.log(`DB CONNECTED ${name}`) // giving error
 })('neharika'); // parameterizeds
 
-// sometimes this iife doesnot know where to end this function so it is must to end the function with semicolon.
+// sometimes this iife doesnot know where to end this function so it is must to end the function with semicolon.0
