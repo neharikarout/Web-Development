@@ -98,7 +98,7 @@ consumePromiseFive()
 //     }
 // }
 
-getAllUsers() // no problem in code but promise is pending as response also take time so use await .
+//getAllUsers() // no problem in code but promise is pending as response also take time so use await .
 
 
 
