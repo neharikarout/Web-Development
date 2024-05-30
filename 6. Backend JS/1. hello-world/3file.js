@@ -1,4 +1,5 @@
 const fs = require('fs')
+const os = require('os')
 
 // Sync..
 //fs.writeFileSync('test.txt', "Hey, There!")
@@ -65,11 +66,17 @@ fs.readFile('contact.txt','utf-8',(err, result) => {
 })
 console.log('2')
 
-// it will run as usual . it will not wait non blocking completes its request
+// it will run as usual . it will not wait non blocking completes its request. gives result through callback
 // o/p : 1
 // 2
 // neharika rout = +91111111111
 
+
+console.log(os.cpus().length) // poolsize of your cpu : 16 
+
+
+// By default : you have 4 threadpool size . Can you increase it .
+// Max ? - 8 core cpu - 8
 
 
 
