@@ -1,5 +1,6 @@
 const http = require('http')
 const fs = require('fs')
+const url = require('url')
 
 // the callback here is request listener. and is responsible for handling requests. req,res are request handlers
 const myServer = http.createServer((req,res) => {
@@ -10,12 +11,17 @@ const myServer = http.createServer((req,res) => {
     // })
 
     // we can use that req.url
+    if(req.url === "/favicon.ico") return res.end();
     const log = `${Date.now()}: ${req.url} New Request Received \n`
+    const myUrl = url.parse(req.url,true) // it will parse the url into string tokens
+
     fs.appendFile('log.txt',log,(err,data) => {
-        switch(req.url){
+        switch(myUrl.pathname){
             case '/': res.end("Hello , from Server again");
             break;
-            case '/about': res.end("I am Neharika Rout");
+            case '/about': 
+            const username = myUrl.query.myname;
+            res.end(` Hi , ${username}`);
             break;
             default:
                 res.end("404 Not Found")
