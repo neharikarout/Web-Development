@@ -1,6 +1,6 @@
 //const math = require("./math") 
 // usermade modules : need to mention whole path otherwise it will try to find in its own package considering it as built-in module
-const {add, sub} = require("./math") // you can destructure it too
+const {add, sub} = require("./2math") // you can destructure it too
 
 //node js has many built-in packages too
 // to import those packages you just need to write its name unlike usermade modules it will find in its package
