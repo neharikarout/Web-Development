@@ -1,0 +1,14 @@
+{
+  "name": "3server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "neharika",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
