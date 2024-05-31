@@ -1,0 +1,20 @@
+REST API - JSON
+
+// making a hybrid server
+GET /users - HTML Document Render - Done
+GET /api/users - List all users - Done
+GET /api/users/1 - Get the user with ID 1 - Done
+
+Dynamic Path Parameters 
+GET/api/user/:id
+:id -> variable or Dynamic
+
+POST /api/users - create new user -
+
+PATCH /api/users/1 - Edit the user with ID 1
+
+DELETE /api/users/1 - Delete the user with ID 1
+
+// now we have no DB so we will hardcode it and use the website -mockaroo.com
+
+
