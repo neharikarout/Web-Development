@@ -1,0 +1,22 @@
+// Version
+
+// 4.19.2
+
+1st part = 4
+2nd part = 19
+3rd part = 2
+
+3rd part(last part) = minor fixes (optional)
+
+2nd part =  recommended bug fix (security fix)
+
+1st  part = major release / breaking update
+
+^ = install all recommended and minor fixes automatically
+
+without any symbol = the version will be locked
+
+~ = dont even change recommended fixes , only minor fixes
+
+
+can give range too
