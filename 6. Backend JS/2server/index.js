@@ -12,17 +12,25 @@ const myServer = http.createServer((req,res) => {
 
     // we can use that req.url
     if(req.url === "/favicon.ico") return res.end();
-    const log = `${Date.now()}: ${req.url} New Request Received \n`
+    const log = `${Date.now()}: ${req.method} ${req.url} New Request Received \n`
     const myUrl = url.parse(req.url,true) // it will parse the url into string tokens
 
     fs.appendFile('log.txt',log,(err,data) => {
         switch(myUrl.pathname){
-            case '/': res.end("Hello , from Server again");
+            case '/':
+                if(req.method === "GET") res.end("HOMEPAGE");
             break;
             case '/about': 
             const username = myUrl.query.myname;
             res.end(` Hi , ${username}`);
             break;
+            case "/signup":
+                if(req.method === "GET") res.end('This is a signup form');
+                else if(req.method === "POST"){
+                    // DB Query
+                    res.end("Success")
+                }
+                break;
             default:
                 res.end("404 Not Found")
 
