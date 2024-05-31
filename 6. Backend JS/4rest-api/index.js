@@ -1,8 +1,12 @@
 const express = require('express')
 const users = require("./MOCK_DATA.json")
+const fs = require('fs')
 
 const app = express();
 const PORT = 8000;
+
+// middleware - plugin
+app.use(express.urlencoded({extended : false}))
 
 // Routes
 app.get("/users" , (req,res) => {
@@ -41,6 +45,16 @@ app.route('/api/users/:id')
 .delete( (req,res) => {
     // todo : delete the user with id
     return res.json({status : "pending"})
+})
+
+app.post("/api/users" , (req,res) => {
+  //todo : create new user
+  const body = req.body;
+  console.log(body)
+  users.push({id: users.length+1 , ...body})
+  fs.writeFile('./MOCK_DATA.json', JSON.stringify(users) , (err,data) => {
+    return res.json({status : "success",id: users.length});
+  })
 })
 
 

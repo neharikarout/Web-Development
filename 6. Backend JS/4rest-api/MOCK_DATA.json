@@ -7998,5 +7998,21 @@
         "email": "rmellingrr@timesonline.co.uk",
         "gender": "Male",
         "job_title": "Quality Engineer"
+    },
+    {
+        "id": 1001,
+        "first_name": "Neharika",
+        "last_name": "Rout",
+        "email": "neharika@gmail.com",
+        "gender": "Female",
+        "job_title": "Software Engineer"
+    },
+    {
+        "id": 1002,
+        "first_name": "Kim",
+        "last_name": "Seokjin",
+        "email": "jin@gmail.com",
+        "gender": "Male",
+        "job_title": "CEO"
     }
 ]
