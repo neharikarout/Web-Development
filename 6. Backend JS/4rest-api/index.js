@@ -36,13 +36,20 @@ app.route('/api/users/:id')
   })
 .patch((req,res) => {
     // todo : edit the user with id
+    // get hte id of the user
     const id = Number(req.params.id);
+    // get the body which is sent on patch request
     const body = req.body;
+    // find the user in users array
     const user = users.find((user) => user.id === id)
+    // override the user id and the body with new data
     const updatedUser = { ...user, ...body };
+    // making sure that updated user id should be same as id sent of patch 
     updatedUser.id=id;
+    // updated on the users array with updated user
     users[id-1]=updatedUser
 
+    // write updated data on file
    fs.writeFile('MOCK_DATA.json', JSON.stringify(users), (err, data) => {
         return res.json({ status: "Success", updatedUser });
    })
@@ -50,9 +57,20 @@ app.route('/api/users/:id')
 
 .delete( (req,res) => {
     // todo : delete the user with id
-    return res.json({status : "pending"})
-})
+  //Get the id of the user
+  const id = Number(req.params.id);
 
+  //Find out the index of the user with above id from the array "users"
+  const userIdx = users.findIndex((user)=> user.id === id);
+
+  //Get the deleted user object using splice. Mind we need to get the object and not array as returned by splice method, so '[0]' satisfies this requirement. The resulting object is just for the sake of displaying, you may neglect storing it if you don't want to display.
+  const delUser = users.splice(userIdx, 1)[0];
+
+  //Write the changes into the json file.
+  fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
+    return res.json({ status: "success", delUser });
+  });
+})
 app.post("/api/users" , (req,res) => {
   //todo : create new user
   const body = req.body;

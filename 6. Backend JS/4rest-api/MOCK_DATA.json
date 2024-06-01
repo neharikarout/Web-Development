@@ -3,9 +3,9 @@
         "id": 1,
         "first_name": "Neharika",
         "last_name": "Rout",
-        "email": "",
-        "gender": "",
-        "job_title": ""
+        "email": "neharika@gmail.com",
+        "gender": "Female",
+        "job_title": "Software Engineer"
     },
     {
         "id": 2,
@@ -609,11 +609,11 @@
     },
     {
         "id": 77,
-        "first_name": "Carilyn",
-        "last_name": "Huffey",
-        "email": "chuffey24@house.gov",
-        "gender": "Non-binary",
-        "job_title": "Cost Accountant"
+        "first_name": "Bangtan",
+        "last_name": "Sonyeondan",
+        "email": "army@gmail.com",
+        "gender": "Male",
+        "job_title": "Idol"
     },
     {
         "id": 78,
@@ -7998,21 +7998,5 @@
         "email": "rmellingrr@timesonline.co.uk",
         "gender": "Male",
         "job_title": "Quality Engineer"
-    },
-    {
-        "id": 1001,
-        "first_name": "Neharika",
-        "last_name": "Rout",
-        "email": "neharika@gmail.com",
-        "gender": "Female",
-        "job_title": "Software Engineer"
-    },
-    {
-        "id": 1002,
-        "first_name": "Kim",
-        "last_name": "Seokjin",
-        "email": "jin@gmail.com",
-        "gender": "Male",
-        "job_title": "CEO"
     }
 ]
