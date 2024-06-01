@@ -34,14 +34,20 @@ app.route('/api/users/:id')
     const user = users.find(user => user.id === id );
     return res.json(user)
   })
-.post((req , res) => {
-    // todo : create new user
-    return res.json({status : "pending"})
-})
 .patch((req,res) => {
     // todo : edit the user with id
-    return res.json({status : "pending"})
+    const id = Number(req.params.id);
+    const body = req.body;
+    const user = users.find((user) => user.id === id)
+    const updatedUser = { ...user, ...body };
+    updatedUser.id=id;
+    users[id-1]=updatedUser
+
+   fs.writeFile('MOCK_DATA.json', JSON.stringify(users), (err, data) => {
+        return res.json({ status: "Success", updatedUser });
+   })
 })
+
 .delete( (req,res) => {
     // todo : delete the user with id
     return res.json({status : "pending"})
