@@ -6,7 +6,29 @@ const app = express();
 const PORT = 8000;
 
 // middleware - plugin
-app.use(express.urlencoded({extended : false}))
+app.use(express.urlencoded({extended : false})) // next is function after this function
+
+// as of now it didnt even process req or send resp to next which make it unable to process the request further
+// app.use((req,res,next) => {
+//   console.log("Hello , from  middleware 1")
+// })
+
+// app.use((req,res,next) => {
+//   console.log("msg: Hello from middleware 1")
+//   req.myUsername = "neharikarout"
+//   next();
+// })
+// app.use((req,res,next) => {
+//   console.log( "Hello from middleware 2", req.myUsername)
+//   next();
+// })
+
+// creating log files using middlewares
+app.use((req,res,next) => {
+  fs.appendFile("log.txt",`${Date.now()} : ${req.method} : ${req.path}\n`, (err,data) => {
+    next();
+  })
+})
 
 // Routes
 app.get("/users" , (req,res) => {
@@ -71,6 +93,8 @@ app.route('/api/users/:id')
     return res.json({ status: "success", delUser });
   });
 })
+
+
 app.post("/api/users" , (req,res) => {
   //todo : create new user
   const body = req.body;
