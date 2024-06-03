@@ -2,3 +2,11 @@
 1717292625116 : /users/101
 1717292677687 : /users/1000 
 1717293083280 : POST : /api/users
+1717379359546 : POST : /api/users
+1717379657303 : POST : /api/users
+1717379776156 : POST : /api/users
+1717379799306 : GET : /api/users
+1717379836751 : POST : /api/users
+1717379894528 : POST : /api/users
+1717379942299 : GET : /api/users
+1717380040367 : GET : /api/users
