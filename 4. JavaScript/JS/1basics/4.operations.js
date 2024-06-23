@@ -16,10 +16,10 @@ let str2 = " Neharika"
 let str3 = str1 + str2 ;
 console.log(str3) // concatenate
 
-console.log("1" + 2) // 12
-console.log(1 + "2") // 12
+console.log(typeof("1" + 2)) // 12 - string
+console.log(typeof(1 + "2")) // 12 - string
 console.log("1" + 2 + 2) // 122 no conversion
-console.log(1 + 2 + "2") // 32  
+console.log(1 + 2 + "2") // 32  added then concatenate
 
 // use parenthesis for readability
 console.log((3+4) * 5 % 2)
