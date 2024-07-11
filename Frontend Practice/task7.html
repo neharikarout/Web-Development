@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+    <style>
+        #center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #download{
+            width: 300px;
+            height: 10px;
+            background-color: #dadada;
+            border-radius: 100px;
+        }
+        #progress{
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+            width: 10%;
+            height: 100%;
+            border-radius: 100px;
+            background-color: rgb(65, 180 , 65);
+        }
+    </style>
+</head>
+<body>
+<div id="center">
+    <h3>Download Completed</h3>
+    <div id="download">
+        <div id="progress"></div>
+    </div>
+</div>
+    <script src="script7.js"></script>
+</body>
+</html>
