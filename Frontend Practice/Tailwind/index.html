@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 </head>
 <body>
-    <div class="flex">
-        <h1 class="text-6xl sm:text-5xl md:text4xl lg:3xl xl:2xl" > Hello </h1>
+    <div class="main w-full h-screen bg-white px-2 py-2 font-['gilroy']">
+        <div class="container mx-auto">
+           <div class="navbar flex justify-between items-center w-full py-3 px-4 ">
+            <h3>Neganou</h3>
+            <div class="hidden lg:flex links flex gap-10">
+                <a href="#" class="text-sm ">Home</a>
+                <a href="#" class="text-sm opacity-50">About</a>
+                <a href="#" class="text-sm opacity-50">Contact</a>
+                <a href="#" class="text-sm opacity-50">Login</a>
+            </div>
+            <i class="ri-menu-line lg:hidden"></i>
+           </div>
+           <div class="w-full flex flex-col items-center mt-20">
+           <div class="image w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center">
+            <img class="object-fill rounded-full "src="./star.png ">
+           </div>
+           <h3 class="font-semibold text-xl mt-4">Hi, I am Neharika </h3>
+           <h1 class="w-3/4 text-3xl tracking-tighter font-semibold text-center leadin-none mt-4">Building digital products, brands and experiences </h1>
+           <p class="text-center w-3/4 mt-10 text-sm font-semibold tracking-tight"> a Product designer and visual Developer.</p>
+           <button class="px-4 py-2 bg-black text-white rounded-full text-xs font-semibold tracking-tight mt-100">Connect with me</button>
+        </div>
+        </div>
     </div>
     
 </body>
