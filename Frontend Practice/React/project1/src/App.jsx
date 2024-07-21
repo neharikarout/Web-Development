@@ -1,5 +1,5 @@
 import React from 'react';
-import Card2 from './components/Card2';
+import Carausal from './components/Carausal';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-     <Card2/>
+     <Carausal/>
     </> 
   )
 }
