@@ -10,7 +10,7 @@ function PropDrilling({values,index,handleClick}) {
         <div className='w-full p-3'>
             <h3 className='font-semibold'>{name}</h3>
             <h5>{profession}</h5>
-            <button onClick={()=>handleClick(index)} className=' px-3 py-1 text-xs text-white bg-blue-500 font-semibold rounded-md'>{friends? "Friends" : "Add a friend"}</button>
+            <button onClick={()=>handleClick(index)} className={`px-3 py-1 text-xs text-white ${friends? 'bg-green-600': 'bg-blue-600'} font-semibold rounded-md`}>{friends? "Friends" : "Add a friend"}</button>
         </div>
 
 
