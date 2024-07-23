@@ -1,37 +1,45 @@
 import React, { useState } from 'react';
-import PropDrilling from './components/PropDrilling';
+import Navbar from './components/Navbar';
+import Songs from './components/Songs';
 
 
 function App() {
 
-const data = [
-  {name: "John", profession:"painter" , image:"https://images.unsplash.com/photo-1595523052653-b9f497845c3d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", friends:false},
-  {name: "Amit", profession:"Artist" , image:"https://images.unsplash.com/photo-1658314756129-5b27f344b65b?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",friends:false},
-  {name: "Carie", profession:"Designer" , image:"https://images.unsplash.com/photo-1598387746216-506f6bd47aad?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",friends:false},
-  {name: "Kim", profession:"Model" , image:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",friends:false},
-]
+  const data= [
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Take Two", artist:"Bangtan", added: false},
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Closer Than This", artist:"JM", added: true},
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Rockstar", artist:"Lisa", added: false},
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Spot", artist:"Zico & Jennie", added: false},
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Super", artist:"Seventeen", added: false},
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Small Girl", artist:"LYJ", added: true},
+    {img:"https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGFic3RyYWN0fGVufDB8fDB8fHww", name:"Lost", artist:"RM", added: false},
+  ]
 
-
-  const [realData, setRealData] = useState(data);
-  const handleFriendsButton = (cardIndex)=>{
-    setRealData((prev)=>{
-     return  prev.map((item,index)=>{
-        if(index === cardIndex){
-          return {...item, friends: !item.friends}
-        }
+  const[songData , setSongData] = useState(data);
+  const handleClick = (index)=> {
+    setSongData((prev)=>{
+      return prev.map((item,itemIndex)=>{
+        if(itemIndex === index) return{...item,added: !item.added}
         return item;
+
       })
     })
   }
 
+  
+  
 
   return (
     <>
-    <div className='w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center'>
-     {realData.map((item,index)=>(
-      <PropDrilling key={index} index={index} handleClick={handleFriendsButton} values={item} />
-     ))}
-     </div>
+      <div className='w-full h-full bg-zinc-300  p-4 '>
+        <Navbar data={songData}/>
+         <div className='px-20 flex gap-10 mt-10 flex-wrap'>
+         {songData.map((obj,index)=>{
+          return <Songs key={index} data={obj} handleClick={handleClick}  index={index}/>
+         })}
+         </div>
+        
+      </div>
     </> 
   )
 }
