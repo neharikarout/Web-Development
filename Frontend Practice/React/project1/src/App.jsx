@@ -1,24 +1,18 @@
 import React, { useRef, useState } from 'react';
+import {useForm} from 'react-hook-form'
 
 
 
 function App() {
 
-
-  const name = useRef(null);
-  const age = useRef(null);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(name.current.value, age.current.value)
-  }
+  const {register,handleSubmit} = useForm();
   
 
   return (
     <>
-     <form action='' onSubmit={handleSubmit}>
-      <input ref={name} placeholder='name' type='text'/>
-      <input ref={age} placeholder='age' type='text'/>
+     <form action='' onSubmit={handleSubmit(data => console.log(data))}>
+      <input {...register('name')} placeholder='name' type='text'/>
+      <input {...register('email')} placeholder='email' type='text'/>
       <input type='submit' />
      </form>
     </> 
